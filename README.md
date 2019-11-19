@@ -13,6 +13,8 @@ The details are given for Linux user. If you want to connect from windows and ha
 
 In this repository, examples taken from [tensorflow](https://www.tensorflow.org/tutorials) and [pytorch](https://pytorch.org/tutorials/) are given. The last section details how to start the calculations on the jupyter notebook at the CRIANN.
 
+**Warning: For all the following steps, you will need INSA login/password.**
+
 ## Accessing the machines at the INSA
 
 You can find all the information for remote connection [here](https://wiki.insa-rouen.fr/doku.php?id=insa:salles-tp:start)
