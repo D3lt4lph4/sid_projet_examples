@@ -43,7 +43,7 @@ ssh -X -p2200 -o 'HostKeyAlias gmlinXX.insa-rouen.fr' <username>@localhost
 
 There is two possible situations you can be in when you try to connect to the servers. Either you connect from a machine at the INSA or from the outside.
 
-If you connect from the insa, simply do the following to connect:
+If you connect from the INSA, simply do the following to connect:
 
 ```bash
 # Run the ssh command from a bash shell
@@ -58,6 +58,8 @@ If you connect from outside the insa, you need to connect through the ssh proxy:
 ```
 
 ## Running calculation on the CRIANN
+
+### JupyterLab
 
 Once you are connected at the CRIANN, you can start a notebook using the following commands:
 
@@ -86,3 +88,21 @@ pip install torchvision --user
 
 **Warning**
 Jupyter may not release CUDA from the notebooks, to run a new notebook you may need to restart or close the previous one.
+
+### Job Submissions
+
+Alternatively, you can submit a job to SLURM (a task scheduler). Once submitted, a job will run when there is time on the schedule.
+
+The system is divided in nodes. You have access to the "insa" partition to start the jobs. To start a job you have to run a .sl script with the command sbatch. An example script is provided here [example.sl](sbatch_example/example.sl).
+
+```
+# Run the command
+sbatch sbatch_example/example.sl
+
+# Display the queued jobs
+squeue
+squeue -u <user>
+
+# Available partitions
+sinfo
+```
