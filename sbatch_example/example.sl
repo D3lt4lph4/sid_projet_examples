@@ -19,7 +19,7 @@
 # Loads the conda module
 module load conda3/1907
 
-# Activate a pre-created conda env with the correct install
+# Activate a pre-created conda env with the correct install (keras/tensorflow-gpu)
 conda activate mnist
 
 # Start the calculation on the gpu
