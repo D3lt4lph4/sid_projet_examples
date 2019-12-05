@@ -12,7 +12,7 @@
 #SBATCH --partition insa
 #SBATCH --gres gpu:1
 #SBATCH --nodes 1
-#SBATCH --cpus_per_task 12
+#SBATCH --cpus-per-task 12
 #SBATCH --output %J.out
 #SBATCH --error %J.err
 
