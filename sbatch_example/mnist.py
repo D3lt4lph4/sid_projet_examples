@@ -57,8 +57,8 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
-callbacks = [keras.callbacks.ModelCheckpoint(os.path.join(os.environ["LOCAL_WORK_DIR"], os.environ["CUDA_VISIBLE_DEVICES"], 'checkpoint-{epoch}.h5'))]
-os.makedirs(os.path.join(os.environ["LOCAL_WORK_DIR"], os.environ["CUDA_VISIBLE_DEVICES"]))
+callbacks = [keras.callbacks.ModelCheckpoint(os.path.join('checkpoints', 'checkpoint-{epoch}.h5'))]
+os.makedirs(checkpoints)
 model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adadelta(),
               metrics=['accuracy'])
